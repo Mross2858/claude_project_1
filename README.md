@@ -2,6 +2,12 @@
 
 This repository serves as a practical exploration of web development and GitHub workflow management, created through an interactive collaboration with Claude AI. The project demonstrates the process of building and managing a simple yet professional website while learning various web development concepts.
 
+I must give credit to David Andrej and his youtube video "Build Anything with Claude Agents: Here's How"
+
+Having been an avid AI user I see videos often on new capabilties but I think this one (MCP) by far takes the cake.
+
+It is an almost start to finish AI implementation that allows claude to access all relevent information (OS + latest news/websites + data + Github) and manage these different aspects just through prompting.
+
 ## Project Overview
 
 This project was created to:
