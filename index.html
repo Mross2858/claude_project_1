@@ -20,9 +20,9 @@
         <main>
             <section id="intro" class="intro-section">
                 <div class="intro-content">
-                    <img src="./images/IMG_2106.jpeg" alt="Michael Ross" class="profile-image">
+                    <img src="./images/IMG_2106.jpeg" alt="Michael Ross" class="profile-image" onclick="toggleImageSize(this)">
                     <div class="intro-text">
-                        <h1>Hey, I'm Michael 👋</h1>
+                        <h1>Hey, I'm Michael</h1>
                         <p>A sales development representative passionate about the intersection of AI and technology. Currently exploring ways to integrate artificial intelligence into everyday workflows.</p>
                     </div>
                 </div>
@@ -95,5 +95,15 @@
             <p>© 2024 · Built with Claude AI</p>
         </footer>
     </div>
+
+    <script>
+    function toggleImageSize(img) {
+        if (img.classList.contains('enlarged')) {
+            img.classList.remove('enlarged');
+        } else {
+            img.classList.add('enlarged');
+        }
+    }
+    </script>
 </body>
 </html>
