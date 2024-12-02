@@ -21,6 +21,7 @@ body {
     max-width: 672px;
     margin: 0 auto;
     padding: 2rem 1rem;
+    position: relative;
 }
 
 /* Header and Navigation */
@@ -58,6 +59,50 @@ body {
     color: var(--link-hover);
 }
 
+/* Sidebar Navigation */
+.sidebar {
+    position: fixed;
+    left: calc(50% + 372px);
+    top: 120px;
+    width: 200px;
+    padding-left: 3rem;
+}
+
+.sidebar-nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 120px;
+}
+
+.sidebar-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.75rem;
+}
+
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-links li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+}
+
+.sidebar-links a {
+    color: var(--secondary-text);
+    text-decoration: none;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.sidebar-links a:hover {
+    color: var(--accent-color);
+}
+
 /* Typography */
 h1 {
     font-size: 2rem;
@@ -93,6 +138,7 @@ section {
     margin-bottom: 3rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid var(--border-color);
+    scroll-margin-top: 2rem;
 }
 
 section:last-child {
@@ -150,6 +196,12 @@ footer {
 }
 
 /* Responsive design */
+@media (max-width: 1200px) {
+    .sidebar {
+        display: none;
+    }
+}
+
 @media (max-width: 640px) {
     .container {
         padding: 1.5rem 1rem;
