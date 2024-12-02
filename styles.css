@@ -77,6 +77,22 @@ body {
     border-radius: 9999px;
     object-fit: cover;
     flex-shrink: 0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.profile-image.enlarged {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80vh;
+    max-width: 1200px;
+    max-height: 800px;
+    border-radius: 12px;
+    z-index: 1000;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.7);
 }
 
 .intro-text {
@@ -255,5 +271,10 @@ footer {
     .projects-grid,
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    .profile-image.enlarged {
+        width: 90vw;
+        height: 90vw;
     }
 }
