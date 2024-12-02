@@ -1,0 +1,130 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3 {
+    color: #333;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+h1 {
+    border-bottom: 2px solid #333;
+}
+
+/* Skip to main content link */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    background-color: white;
+    color: black;
+    opacity: 0;
+}
+
+.skip-link:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+nav a:hover, nav a:focus {
+    text-decoration: underline;
+}
+
+/* Section styles */
+section {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Projects section */
+.projects-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.projects-list li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.projects-list li:before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #333;
+}
+
+/* Focus styles */
+:focus {
+    outline: 3px solid #4A90E2;
+    outline-offset: 2px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    section {
+        border: 2px solid black;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
