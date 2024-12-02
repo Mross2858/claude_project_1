@@ -3,42 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Detailed projects page">
+    <meta name="description" content="Detailed overview of my projects and work">
     <title>My Projects - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header role="banner">
-        <h1>My Projects</h1>
-        <nav role="navigation" aria-label="Main navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#web-projects">Web Projects</a></li>
-                <li><a href="#data-projects">Data Projects</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container">
+        <header>
+            <h1>My Projects</h1>
+            <p>A detailed look at my work in web development, AI integration, and more.</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#web-projects">Web Projects</a></li>
+                    <li><a href="#data-projects">Data Projects</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <main id="main-content" role="main">
-        <section id="web-projects" aria-labelledby="web-heading">
-            <h2 id="web-heading">Web Development Projects</h2>
-            <ul class="projects-list">
-                <li>Portfolio Website: Built with HTML, CSS, and GitHub Pages</li>
-                <li>Accessibility Implementation: ARIA labels and semantic HTML</li>
-            </ul>
-        </section>
+        <main>
+            <section id="web-projects">
+                <h2>Web Development</h2>
+                <ul class="projects-list">
+                    <li>
+                        <h3>Portfolio Website</h3>
+                        <p>A responsive, accessible website built with modern HTML and CSS, featuring clean design and proper semantic markup.</p>
+                    </li>
+                    <li>
+                        <h3>Accessibility Implementation</h3>
+                        <p>Integration of ARIA labels, semantic HTML, and keyboard navigation to ensure web content is accessible to all users.</p>
+                    </li>
+                </ul>
+            </section>
 
-        <section id="data-projects" aria-labelledby="data-heading">
-            <h2 id="data-heading">Data Science Projects</h2>
-            <ul class="projects-list">
-                <li>Data Analysis with Python</li>
-                <li>Machine Learning Experiments</li>
-            </ul>
-        </section>
-    </main>
+            <section id="data-projects">
+                <h2>Data & AI Projects</h2>
+                <ul class="projects-list">
+                    <li>
+                        <h3>AI Integration Experiments</h3>
+                        <p>Exploring the capabilities of AI assistants in web development workflows and project management.</p>
+                    </li>
+                    <li>
+                        <h3>GitHub Automation</h3>
+                        <p>Implementing automated workflows for code management and deployment using GitHub Actions and Pages.</p>
+                    </li>
+                </ul>
+            </section>
+        </main>
 
-    <footer role="contentinfo">
-        <p><a href="index.html">Back to Home</a></p>
-    </footer>
+        <footer>
+            <p><a href="index.html">← Back to Home</a></p>
+            <p>© 2024 · Built with Claude AI</p>
+        </footer>
+    </div>
 </body>
 </html>
