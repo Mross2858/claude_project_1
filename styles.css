@@ -71,11 +71,11 @@ body {
     gap: 2rem;
 }
 
-.profile-image-placeholder {
+.profile-image {
     width: 96px;
     height: 96px;
     border-radius: 9999px;
-    background-color: var(--border-color);
+    object-fit: cover;
     flex-shrink: 0;
 }
 
