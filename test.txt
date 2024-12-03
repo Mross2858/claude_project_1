@@ -1,1 +1,1 @@
-{"encoding": "utf-8", "content": "Testing file content"}
+{"base64": "VGVzdGluZyBmaWxlIGNvbnRlbnQ="}
