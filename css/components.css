@@ -54,18 +54,18 @@
     top: 50%;
     transform: translateY(-50%);
     background: transparent;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    z-index: 100;
+    width: 8rem;
+    text-align: left;
 }
 
 .sidebar-links {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .sidebar-links li {
-    margin: 1rem 0;
+    margin: 1.5rem 0;
 }
 
 .sidebar-links a {
@@ -73,6 +73,7 @@
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.2s ease;
+    font-weight: 500;
 }
 
 .sidebar-links a:hover {
