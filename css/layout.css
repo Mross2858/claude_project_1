@@ -1,56 +1,121 @@
 /* Layout styles */
 main {
-    padding-top: 5rem;
-    margin-left: 10rem; /* Add space for sidebar */
+    padding-top: 6rem; /* Increased from 5rem */
+    margin-left: 12rem; /* Increased from 10rem for better sidebar spacing */
 }
 
-.projects-grid,.skills-grid {
+/* Add spacing between sections */
+section {
+    margin-bottom: 6rem; /* Added explicit section spacing */
+    padding: 2rem 0; /* Added vertical padding */
+}
+
+/* Improved grid layouts */
+.projects-grid,
+.skills-grid {
     display: grid;
-    gap: 1.5rem;
-    margin-top: 2rem;
+    gap: 2rem; /* Increased from 1.5rem */
+    margin-top: 3rem; /* Increased from 2rem */
 }
 
 .projects-grid {
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .skills-grid {
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* Improved intro section layout */
 .intro-content {
     display: flex;
     align-items: center;
-    gap: 3rem;
-    max-width: 800px;
-    margin: 0 auto;
+    gap: 4rem; /* Increased from 3rem */
+    max-width: 900px; /* Increased from 800px */
+    margin: 2rem auto 4rem; /* Added vertical margins */
+    padding: 2rem;
 }
 
+.intro-text {
+    flex: 1;
+}
+
+/* Header social links */
 .social-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem; /* Increased from 1.5rem */
     align-items: center;
+    padding: 0.5rem;
 }
 
-@media(max-width:768px) {
+/* Video wrapper for responsive embeds */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    margin: 3rem 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    main {
+        margin-left: 10rem;
+    }
+    
+    .intro-content {
+        max-width: 100%;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
     main {
         margin-left: 0;
+        padding-top: 5rem;
     }
+    
     .sidebar {
         display: none;
     }
+    
     .intro-content {
         flex-direction: column;
         text-align: center;
-        gap: 2rem;
+        gap: 2.5rem;
     }
+    
     .social-links {
-        gap: 1rem;
+        gap: 1.5rem;
+    }
+    
+    section {
+        margin-bottom: 4rem;
+        padding: 1rem 0;
     }
 }
 
-@media(max-width:640px) {
-    .projects-grid,.skills-grid {
+@media (max-width: 640px) {
+    .projects-grid,
+    .skills-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .intro-content {
+        padding: 1rem 0;
     }
 }
