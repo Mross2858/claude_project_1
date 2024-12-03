@@ -1,1 +1,1 @@
-{"content": "Testing MCP file update", "encoding": "utf-8"}
+Testing file content
