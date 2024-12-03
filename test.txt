@@ -1,1 +1,4 @@
-LyogVGhpcyBpcyBhIHRlc3QgZmlsZSAqLw==
+{
+  "encoding": "base64",
+  "content": "LyogVGhpcyBpcyBhIHRlc3QgZmlsZSAqLw=="
+}
