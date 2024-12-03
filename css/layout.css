@@ -1,65 +1,65 @@
 /* Layout styles */
 main {
-    padding-top: 6rem; /* Increased from 5rem */
-    margin-left: 12rem; /* Increased from 10rem for better sidebar spacing */
+    padding-top: 6rem;
+    margin-left: 12rem;
 }
 
-/* Add spacing between sections */
 section {
-    margin-bottom: 6rem; /* Added explicit section spacing */
-    padding: 2rem 0; /* Added vertical padding */
-}
-
-/* Improved grid layouts */
-.projects-grid,
-.skills-grid {
-    display: grid;
-    gap: 2rem; /* Increased from 1.5rem */
-    margin-top: 3rem; /* Increased from 2rem */
-}
-
-.projects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    margin-bottom: 6rem;
+    padding: 2rem 0;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+section > h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--text-color);
 }
 
-/* Improved intro section layout */
+.projects-grid,
+.skills-grid {
+    display: grid;
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+}
+
+.skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
 .intro-content {
     display: flex;
     align-items: center;
-    gap: 4rem; /* Increased from 3rem */
-    max-width: 900px; /* Increased from 800px */
-    margin: 2rem auto 4rem; /* Added vertical margins */
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 2rem auto 4rem;
     padding: 2rem;
 }
 
 .intro-text {
     flex: 1;
+    line-height: 1.7;
 }
 
-/* Header social links */
 .social-links {
     display: flex;
-    gap: 2rem; /* Increased from 1.5rem */
+    gap: 2rem;
     align-items: center;
-    padding: 0.5rem;
+    padding: 0.75rem;
 }
 
-/* Video wrapper for responsive embeds */
 .video-wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
     height: 0;
-    margin: 3rem 0;
+    margin: 3rem auto;
+    max-width: 900px;
 }
 
 .video-wrapper iframe {
@@ -68,9 +68,9 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
+    border-radius: 0.5rem;
 }
 
-/* Responsive adjustments */
 @media (max-width: 1024px) {
     main {
         margin-left: 10rem;
@@ -78,7 +78,8 @@ section {
     
     .intro-content {
         max-width: 100%;
-        padding: 1rem;
+        padding: 1.5rem;
+        gap: 3rem;
     }
 }
 
@@ -104,7 +105,7 @@ section {
     
     section {
         margin-bottom: 4rem;
-        padding: 1rem 0;
+        padding: 1rem;
     }
 }
 
@@ -112,10 +113,14 @@ section {
     .projects-grid,
     .skills-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 2rem;
     }
     
     .intro-content {
-        padding: 1rem 0;
+        padding: 1rem;
+    }
+    
+    section > h2 {
+        font-size: 1.75rem;
     }
 }
