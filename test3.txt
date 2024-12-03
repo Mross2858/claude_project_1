@@ -1,0 +1,4 @@
+{
+  "content": "This is a test of the MCP file creation system",
+  "encoding": "utf-8"
+}
