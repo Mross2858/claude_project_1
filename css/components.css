@@ -7,54 +7,69 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 1.25rem 2.5rem; /* Increased padding */
     background-color: var(--background-color);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Added subtle shadow */
 }
 
 .project-card {
     background-color: var(--card-bg);
-    border-radius: .5rem;
-    padding: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,.1);
-    transition: transform .2s,box-shadow .2s;
+    border-radius: 0.75rem; /* Increased from .5rem */
+    padding: 2rem; /* Increased from 1.5rem */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    transition: transform .2s, box-shadow .2s;
+    height: 100%; /* Ensure equal height cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .project-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0,0,0,.1);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    margin-bottom: 1.5rem;
 }
 
 .profile-image {
-    width: var(--profile-image-size);
-    height: var(--profile-image-size);
+    width: calc(var(--profile-image-size) * 1.25); /* Increased size */
+    height: calc(var(--profile-image-size) * 1.25);
     border-radius: 50%;
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
 .profile-image.enlarged {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%) scale(2);
+    transform: translate(-50%,-50%) scale(2.5); /* Increased scale */
     max-width: 90vw;
     max-height: 90vh;
     width: auto;
     height: auto;
     z-index: 1000;
-    box-shadow: 0 0 20px rgba(0,0,0,.3);
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    border-radius: 1rem;
 }
 
 .sidebar {
     position: fixed;
-    left: 2rem;
+    left: 2.5rem; /* Increased from 2rem */
     top: 50%;
     transform: translateY(-50%);
     background: transparent;
-    width: 8rem;
+    width: 9rem; /* Increased from 8rem */
     text-align: left;
 }
 
@@ -65,24 +80,41 @@
 }
 
 .sidebar-links li {
-    margin: 1.5rem 0;
+    margin: 2rem 0; /* Increased from 1.5rem */
 }
 
 .sidebar-links a {
     color: var(--text-color);
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.15rem; /* Slightly increased */
     transition: color 0.2s ease;
     font-weight: 500;
+    padding: 0.5rem 0;
+    display: block;
 }
 
 .sidebar-links a:hover {
     color: var(--accent-color);
+    transform: translateX(5px);
+    transition: all 0.2s ease;
+}
+
+/* Skill category styling */
+.skill-category {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+}
+
+.skill-category h3 {
+    margin-bottom: 1rem;
+    color: var(--accent-color);
 }
 
 footer {
-    margin-top: 4rem;
-    padding-top: 2rem;
+    margin-top: 6rem; /* Increased from 4rem */
+    padding: 3rem 0 2rem; /* Increased padding */
     border-top: 1px solid var(--border-color);
     text-align: center;
     color: var(--secondary-text);
