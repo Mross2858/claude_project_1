@@ -1,49 +1,4 @@
-/* Layout styles */
-.container {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    position: relative;
-}
-
-.header {
-    grid-column: 1 / -1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.sidebar {
-    position: sticky;
-    top: 2rem;
-    height: fit-content;
-    background-color: var(--card-bg);
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-main {
-    grid-column: 2;
-}
-
-.intro-section {
-    margin: 4rem 0;
-}
-
-.intro-content {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
+/* Grid and Flexbox Layouts */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -58,33 +13,36 @@ main {
     margin-top: 2rem;
 }
 
-.video-wrapper {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    margin: 2rem 0;
+.intro-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 0.5rem;
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
 }
 
+/* Responsive layouts */
 @media (max-width: 768px) {
-    .container {
+    .intro-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .social-links {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .projects-grid,
+    .skills-grid {
         grid-template-columns: 1fr;
-    }
-    
-    .sidebar {
-        display: none;
-    }
-    
-    main {
-        grid-column: 1;
     }
 }
