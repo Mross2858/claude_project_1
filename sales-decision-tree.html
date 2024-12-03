@@ -14,14 +14,14 @@
             <div class="social-links">
                 <a href="https://github.com/Mross2858" target="_blank" rel="noopener noreferrer">GitHub</a>
                 <a href="https://www.linkedin.com/in/mtross2024/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="#" class="contact-button" onclick="return false;">
+                <span class="contact-button">
                     📞
                     <span class="contact-info">510-605-7659</span>
-                </a>
-                <a href="#" class="contact-button" onclick="return false;">
+                </span>
+                <span class="contact-button">
                     ✉️
                     <span class="contact-info">michaeltross2024@gmail.com</span>
-                </a>
+                </span>
             </div>
         </header>
 
@@ -42,6 +42,22 @@
                     
                     <p>The <strong>node structure</strong> (e.g., 2YYN, 2YNY) was rigid and hard to monitor, which made data processing capabilities less effective.</p>
                 </div>
+
+                <div class="carousel-container">
+                    <div class="carousel-slides">
+                        <!-- Placeholder for images -->
+                        <div class="carousel-slide">
+                            <div class="carousel-placeholder">Image placeholder - Ready for your content</div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
+                    <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+                    
+                    <div class="carousel-dots">
+                        <span class="carousel-dot active" onclick="goToSlide(0)"></span>
+                    </div>
+                </div>
             </section>
         </main>
 
@@ -59,5 +75,35 @@
             <p>© 2024 · Built with Claude AI</p>
         </footer>
     </div>
+
+    <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+
+    function moveSlide(n) {
+        showSlide(currentSlide + n);
+    }
+
+    function goToSlide(n) {
+        showSlide(n);
+    }
+
+    function showSlide(n) {
+        const slidesContainer = document.querySelector('.carousel-slides');
+        currentSlide = n;
+
+        if (currentSlide >= slides.length) currentSlide = 0;
+        if (currentSlide < 0) currentSlide = slides.length - 1;
+
+        const offset = -currentSlide * 100;
+        slidesContainer.style.transform = `translateX(${offset}%)`;
+
+        // Update dots
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    }
+    </script>
 </body>
 </html>
