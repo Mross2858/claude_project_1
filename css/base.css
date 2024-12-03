@@ -1,0 +1,31 @@
+/* Base styles and variables */
+:root {
+    --text-color: #1F2937;
+    --background-color: #FFFFFF;
+    --accent-color: #3B82F6;
+    --secondary-text: #4B5563;
+    --border-color: #E5E7EB;
+    --card-bg: #F9FAFB;
+    --link-hover: #2563EB;
+    --profile-image-size: 96px;
+    --tooltip-bg: #1F2937;
+    --tooltip-text: #FFFFFF;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    line-height: 1.2;
+}
+
+p {
+    margin: 0;
+}
