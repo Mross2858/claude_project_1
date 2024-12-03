@@ -1,1 +1,1 @@
-Testing file content
+{"encoding": "utf-8", "content": "Testing file content"}
