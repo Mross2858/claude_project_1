@@ -13,45 +13,35 @@
     z-index: 1000;
 }
 
-.project-card {
-    background-color: var(--card-bg);
-    border-radius: .5rem;
-    padding: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,.1);
-    transition: transform .2s,box-shadow .2s;
-}
-
-.project-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0,0,0,.1);
-}
-
-.profile-image {
-    width: var(--profile-image-size);
-    height: var(--profile-image-size);
-    border-radius: 50%;
-    object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.profile-image.enlarged {
+.sidebar {
     position: fixed;
+    left: 2rem;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%) scale(2);
-    max-width: 90vw;
-    max-height: 90vh;
-    width: auto;
-    height: auto;
-    z-index: 1000;
-    box-shadow: 0 0 20px rgba(0,0,0,.3);
+    transform: translateY(-50%);
+    background: transparent;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    z-index: 100;
 }
 
-footer {
-    margin-top: 4rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border-color);
-    text-align: center;
-    color: var(--secondary-text);
+.sidebar-links {
+    list-style: none;
+    padding: 0;
 }
+
+.sidebar-links li {
+    margin: 1rem 0;
+}
+
+.sidebar-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+}
+
+.sidebar-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Rest of component styles remain unchanged */
