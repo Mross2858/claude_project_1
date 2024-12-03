@@ -1,4 +1,11 @@
-/* Base styles and variables */
+/* CSS Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Custom Properties */
 :root {
     --text-color: #1F2937;
     --background-color: #FFFFFF;
@@ -12,20 +19,17 @@
     --tooltip-text: #FFFFFF;
 }
 
+/* Base Elements */
 body {
     font-family: system-ui, -apple-system, sans-serif;
     color: var(--text-color);
     background-color: var(--background-color);
     line-height: 1.5;
-    margin: 0;
-    padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    line-height: 1.2;
-}
-
-p {
-    margin: 0;
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    position: relative;
 }
