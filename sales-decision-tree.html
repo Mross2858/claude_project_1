@@ -45,17 +45,25 @@
 
                 <div class="carousel-container">
                     <div class="carousel-slides">
-                        <!-- Placeholder for images -->
+                        <!-- Placeholder for testing -->
                         <div class="carousel-slide">
-                            <div class="carousel-placeholder">Image placeholder - Ready for your content</div>
+                            <div class="carousel-placeholder">First Image</div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="carousel-placeholder">Second Image</div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="carousel-placeholder">Third Image</div>
                         </div>
                     </div>
                     
-                    <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
-                    <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+                    <button class="carousel-btn prev" onclick="moveSlide(-1)">←</button>
+                    <button class="carousel-btn next" onclick="moveSlide(1)">→</button>
                     
                     <div class="carousel-dots">
                         <span class="carousel-dot active" onclick="goToSlide(0)"></span>
+                        <span class="carousel-dot" onclick="goToSlide(1)"></span>
+                        <span class="carousel-dot" onclick="goToSlide(2)"></span>
                     </div>
                 </div>
             </section>
