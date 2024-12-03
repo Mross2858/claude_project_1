@@ -1,35 +1,8 @@
-/* CSS Reset */
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+/* Reset and base styles */
+*{margin:0;padding:0;box-sizing:border-box}
 
-/* Custom Properties */
-:root {
-    --text-color: #1F2937;
-    --background-color: #FFFFFF;
-    --accent-color: #3B82F6;
-    --secondary-text: #4B5563;
-    --border-color: #E5E7EB;
-    --card-bg: #F9FAFB;
-    --link-hover: #2563EB;
-    --profile-image-size: 96px;
-    --tooltip-bg: #1F2937;
-    --tooltip-text: #FFFFFF;
-}
+:root{--text-color:#1F2937;--background-color:#FFFFFF;--accent-color:#3B82F6;--secondary-text:#4B5563;--border-color:#E5E7EB;--card-bg:#F9FAFB;--link-hover:#2563EB;--profile-image-size:96px;--tooltip-bg:#1F2937;--tooltip-text:#FFFFFF}
 
-/* Base Elements */
-body {
-    font-family: system-ui, -apple-system, sans-serif;
-    color: var(--text-color);
-    background-color: var(--background-color);
-    line-height: 1.5;
-}
+body{font-family:system-ui,-apple-system,sans-serif;color:var(--text-color);background-color:var(--background-color);line-height:1.5}
 
-.container {
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    position: relative;
-}
+.container{max-width:1024px;margin:0 auto;padding:2rem 1rem;position:relative}

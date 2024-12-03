@@ -1,39 +1,9 @@
-/* Header */
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    border-bottom: 1px solid var(--border-color);
-}
+/* Component styles */
+.header{display:flex;align-items:center;justify-content:space-between;padding:1rem;border-bottom:1px solid var(--border-color)}
 
-/* Project Cards */
-.project-card {
-    background-color: var(--card-bg);
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
+.project-card{background-color:var(--card-bg);border-radius:.5rem;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,.1);transition:transform .2s,box-shadow .2s}
+.project-card:hover{transform:translateY(-2px);box-shadow:0 4px 6px rgba(0,0,0,.1)}
 
-.project-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+.profile-image{width:var(--profile-image-size);height:var(--profile-image-size);border-radius:50%;object-fit:cover}
 
-/* Profile Image */
-.profile-image {
-    width: var(--profile-image-size);
-    height: var(--profile-image-size);
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-/* Footer */
-footer {
-    margin-top: 4rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border-color);
-    text-align: center;
-    color: var(--secondary-text);
-}
+footer{margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border-color);text-align:center;color:var(--secondary-text)}
