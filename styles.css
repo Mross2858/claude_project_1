@@ -12,7 +12,91 @@
     --tooltip-text: #FFFFFF;
 }
 
-/* [Previous base styles remain unchanged] */
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--link-hover);
+}
+
+/* Main content styles */
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.profile-image {
+    width: var(--profile-image-size);
+    height: var(--profile-image-size);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-content h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.profile-content p {
+    margin: 0;
+    color: var(--secondary-text);
+}
+
+/* Card styles */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card p {
+    margin: 0;
+    color: var(--secondary-text);
+}
 
 /* Contact button styles */
 .contact-button {
@@ -55,4 +139,15 @@
     border-color: transparent transparent var(--tooltip-bg) transparent;
 }
 
-/* [Rest of the original styles remain unchanged] */
+/* Responsive styles */
+@media (max-width: 640px) {
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+}
