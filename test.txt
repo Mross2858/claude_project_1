@@ -1,1 +1,1 @@
-{"type":"file","encoding":"base64","content":"LyogVGhpcyBpcyBhIHRlc3QgZmlsZSAqLw=="}
+{"content": "Testing MCP file update", "encoding": "utf-8"}
