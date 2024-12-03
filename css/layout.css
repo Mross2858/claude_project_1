@@ -1,6 +1,7 @@
 /* Layout styles */
 main {
-    padding-top: 5rem; /* Accommodate fixed header */
+    padding-top: 5rem;
+    margin-left: 10rem; /* Add space for sidebar */
 }
 
 .projects-grid,.skills-grid {
@@ -32,6 +33,12 @@ main {
 }
 
 @media(max-width:768px) {
+    main {
+        margin-left: 0;
+    }
+    .sidebar {
+        display: none;
+    }
     .intro-content {
         flex-direction: column;
         text-align: center;
